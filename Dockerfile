@@ -20,7 +20,7 @@ RUN { \
 		echo 'opcache.enable_cli=1'; \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
-RUN echo 'This is Carol's script'
+RUN echo 'This is Carol's script';
 	
 WORKDIR /var/www/html
 
