@@ -1,6 +1,6 @@
 # Drupal image without database
 
-This image contains the latest stable Drupal 7-release. It will automatically
+This image contains the latest stable Drupal 8-release. It will automatically
 setup the database and install a default site.
 
 The image doesn't contain a database so you have to create a seperate database
@@ -24,10 +24,10 @@ web-interface as well as with *drush* on the command-line.
 If you want to launch a bare Drupal image with a MySQL backend you can do so:
 
     docker run -d -e MYSQL_ROOT_PASSWORD="test123" --name db mysql
-    docker run -d --link db:mysql -p 80:80 samos123/drupal
+    docker run -d --link db:mysql -p 80:80 carolodiornebi/docker-drupal
 
 Alternatively you can use [Docker-Compose](https://docs.docker.com/compose/)
-in a directory that contains the provided [`docker-compose.yml`](https://github.com/samos123/docker-drupal/blob/master/docker-compose.yml):
+in a directory that contains the provided [`docker-compose.yml`](https://github.com/carolodiornebi/docker-drupal/blob/master/docker-compose.yml):
 
     docker-compose up
 
@@ -72,7 +72,7 @@ You can alternatively use a Postgres container. The configuration is very
 similar to that of MySQL as seen in the `docker-compose.yml` file, with a
 couple small changes.
 
-There is an example `docker-compose.yml` available in the [examples folder](https://github.com/samos123/docker-drupal/tree/master/examples/postgres/docker-compose.yml).
+There is an example `docker-compose.yml` available in the [examples folder](https://github.com/carolodiornebi/docker-drupal/tree/master/examples/postgres/docker-compose.yml).
 
 ## Other options
 
@@ -109,7 +109,7 @@ image or mount them in your container into these directories:
     - the scripts will be executed in alphanumerical order of their names
   - the scripts must be set executable (`chmod a+x <scriptpath>`)
 
-See the [folder examples](https://github.com/samos123/docker-drupal/tree/master/examples/custom-image)
+See the [folder examples](https://github.com/carolodiornebi/docker-drupal/tree/master/examples/custom-image)
 on how to use the *Zen*-template and the *modules_filter*-module and build an
 image containing them.
 
@@ -127,8 +127,8 @@ PHP extensions.
 
 ## Credits
 
-Authors of image: Sam Stoelinga, Frank Sachsenheim, Eric Rasche
+Original Authors of image: Sam Stoelinga, Frank Sachsenheim, Eric Rasche
+Modified by Carol Odiorne
 
-Source code: [https://github.com/samos123/docker-drupal](https://github.com/samos123/docker-drupal)
+Source code: [https://github.com/carolodiornebi/docker-drupal](https://github.com/carolodiornebi/docker-drupal)
 
-Registry url: [https://registry.hub.docker.com/u/samos123/drupal/](https://registry.hub.docker.com/u/samos123/drupal/)

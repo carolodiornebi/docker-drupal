@@ -56,7 +56,8 @@ fi
 
 ### set database configuration defaults if necessary
 
-: ${DB_DRIVER:='mysql'}
+#: ${DB_DRIVER:='mysql'}
+: ${DB_DRIVER:='pgsql'}
 : ${DB_NAME:='drupal'}
 
 if [ "${DB_DRIVER}" = 'mysql' ]; then
