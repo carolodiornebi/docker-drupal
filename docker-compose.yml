@@ -5,6 +5,7 @@ services:
     volumes:
       - .:/code
     ports:
+#- "8000:8000" works on the local machine but not for aws    
       - "80:80"
     depends_on:
       - db
